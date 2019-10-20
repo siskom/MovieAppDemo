@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieListCell" customModule="CDMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="308" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XRs-NP-qSq">
+                        <rect key="frame" x="0.0" y="0.0" width="308" height="174"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XRs-NP-qSq" secondAttribute="height" multiplier="200:113" id="Adw-Ec-ehY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnL-da-wSB">
+                        <rect key="frame" x="5" y="179" width="298" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark-active" translatesAutoresizingMaskIntoConstraints="NO" id="zul-6w-Y2e">
+                        <rect key="frame" x="282" y="6" width="20" height="27"/>
+                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="c42-Cm-338"/>
+                            <constraint firstAttribute="width" secondItem="zul-6w-Y2e" secondAttribute="height" multiplier="31:42" id="eC8-3N-r4i"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zul-6w-Y2e" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="BIa-M2-HHk"/>
+                <constraint firstAttribute="bottom" secondItem="GnL-da-wSB" secondAttribute="bottom" constant="8" id="Izz-Ea-62d"/>
+                <constraint firstAttribute="trailing" secondItem="GnL-da-wSB" secondAttribute="trailing" constant="5" id="N1e-5A-cdh"/>
+                <constraint firstItem="XRs-NP-qSq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UVn-lh-rRI"/>
+                <constraint firstItem="GnL-da-wSB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Ubb-He-sWe"/>
+                <constraint firstAttribute="trailing" secondItem="zul-6w-Y2e" secondAttribute="trailing" constant="6" id="WdK-Wu-FIk"/>
+                <constraint firstItem="XRs-NP-qSq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YKE-Uz-iuj"/>
+                <constraint firstItem="GnL-da-wSB" firstAttribute="top" secondItem="XRs-NP-qSq" secondAttribute="bottom" constant="5" id="gJG-0P-nAU"/>
+                <constraint firstAttribute="trailing" secondItem="XRs-NP-qSq" secondAttribute="trailing" id="ut2-Wq-xJK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="308" height="230"/>
+            <connections>
+                <outlet property="imageView" destination="XRs-NP-qSq" id="PjO-0b-B1K"/>
+                <outlet property="starView" destination="zul-6w-Y2e" id="IgL-dD-7JS"/>
+                <outlet property="titleLabel" destination="GnL-da-wSB" id="rGa-qb-KRr"/>
+            </connections>
+            <point key="canvasLocation" x="50.724637681159422" y="96.428571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark-active" width="32" height="41"/>
+    </resources>
+</document>
